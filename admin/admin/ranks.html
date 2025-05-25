@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>จัดการยศ | สยามชัย Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>เมนูผู้ดูแล</h2>
+            <ul>
+                <li><a href="dashboard.html">แดชบอร์ด</a></li>
+                <li><a href="products.html">จัดการสินค้า</a></li>
+                <li class="active"><a href="ranks.html">จัดการยศ</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <h1>จัดการยศพนักงาน</h1>
+            
+            <div class="add-rank-form">
+                <h2>เพิ่มยศใหม่</h2>
+                <input type="text" id="new-rank-name" placeholder="ชื่อยศ">
+                <input type="number" id="new-rank-level" placeholder="ระดับ">
+                <button onclick="ranksSystem.addRank()">เพิ่มยศ</button>
+            </div>
+
+            <div class="ranks-list">
+                <h2>รายการยศทั้งหมด</h2>
+                <div id="ranks-list"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/ranks.js"></script>
+</body>
+</html>
