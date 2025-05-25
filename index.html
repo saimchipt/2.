@@ -1,77 +1,52 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>สยามชัย - ระบบหลังบ้าน</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สยามชัย</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <img src="logo.png" alt="โลโก้สยามชัย">
-    </div>
+  <header>
+    <div class="logo">โลโก้</div>
+    <nav>
+      <a href="#">แนะนำ</a>
+      <a href="#">สินค้าทั้งหมด</a>
+      <a href="#">วิธีใช้งาน</a>
+    </nav>
+    <div class="logo">จัน</div>
   </header>
 
-  <!-- เมนูบาร์ -->
-  <div class="menu-bar">
-    <div class="menu-item">สถิติ</div>
-    <div class="menu-item">แนะนำ</div>
-    <div class="menu-item">สมัครท้องแดง</div>
-    <div class="menu-item">วิธีที่ต้องแจ้ง</div>
-    <div class="menu-item">อื่น</div>
-  </div>
+  <section class="banner">
+    <h2>โซนแบนเนอร์</h2>
+  </section>
 
-  <!-- ตารางข้อมูล -->
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>สถิติ</th>
-        <th>แนะนำ</th>
-        <th>สมัครท้องแดง</th>
-        <th>วิธีที่ต้องแจ้ง</th>
-        <th>อื่น</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <main>
+    <section class="category">
+      <h3>ทีวีขายดี</h3>
+      <div class="product-grid" id="tv-products"></div>
+    </section>
 
-  <!-- ส่วน "โตแนบแมลง" -->
-  <div class="section-title">โตแนบแมลง</div>
-  <ul class="item-list">
-    <li><strong>กีวิตยอด</strong>
-      <ul>
-        <li>เครื่องยอด</li>
-        <li>เครื่องยอด</li>
-        <li>เครื่องยอด</li>
-      </ul>
-    </li>
-    <li><strong>ผู้เสียการดิ</strong>
-      <ul>
-        <li>ผู้เสียการดิ</li>
-      </ul>
-    </li>
-  </ul>
+    <section class="category">
+      <h3>แอร์ขายดี</h3>
+      <div class="product-grid" id="air-products"></div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>สินค้าตั้งหมดตามข้อปฎิบัติ 2partner ที่ร่วมรายการ</p>
-    <div class="partner-logos">
-      <img src="samsung.png" alt="Samsung">
-      <img src="lg.png" alt="LG">
-      <img src="mitsubishi.png" alt="Mitsubishi">
-      <img src="daikin.png" alt="Daikin">
-      <img src="hitachi.png" alt="Hitachi">
-    </div>
+    <section class="category">
+      <h3>เครื่องซักผ้าขายดี</h3>
+      <div class="product-grid" id="washer-products"></div>
+    </section>
+
+    <section class="category">
+      <h3>ตู้เย็นขายดี</h3>
+      <div class="product-grid" id="fridge-products"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ลิขสิทธิ์ © สยามชัยปทุม 2partner ที่ร่วมรายการ samsung LG toshiba hier mitsubishi daikin hitachi</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
-        </html>
+</html>
