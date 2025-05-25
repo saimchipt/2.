@@ -1,108 +1,62 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Noto Sans Thai', sans-serif;
-}
-
 body {
-  background-color: #FFFFFF;
-  color: #333;
-  padding: 10px;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
 }
 
-/* Header */
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #FF0000;
+  background-color: red;
+  color: white;
+  padding: 1rem;
 }
 
-.logo img {
-  height: 30px;
-}
-
-/* เมนูสถิติ-แนะนำ-สมัคร */
-.menu-bar {
-  display: flex;
-  background-color: #FF0000;
-  padding: 5px 0;
-  margin-bottom: 10px;
-}
-
-.menu-item {
-  flex: 1;
-  text-align: center;
-  color: #FFFFFF;
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
   font-weight: bold;
-  font-size: 12px;
-  padding: 5px;
-  border-right: 1px solid #FFFFFF;
 }
 
-.menu-item:last-child {
-  border-right: none;
-}
-
-/* โต๊ะข้อมูล */
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 15px;
-}
-
-.data-table th, .data-table td {
-  border: 1px solid #FF0000;
-  padding: 5px;
+.banner {
+  background-color: #f55;
   text-align: center;
-  font-size: 12px;
+  padding: 2rem;
+  color: white;
 }
 
-.data-table th {
-  background-color: #FF0000;
-  color: #FFFFFF;
+.category {
+  margin: 2rem;
 }
 
-/* ส่วน "โตแนบแมลง" */
-.section-title {
-  color: #FF0000;
+.category h3 {
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background-color: #f55;
+  height: 150px;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: white;
+  color: red;
+  text-align: center;
+  padding: 1rem;
   font-weight: bold;
-  font-size: 14px;
-  margin: 10px 0 5px 0;
 }
-
-.item-list {
-  margin-left: 15px;
-}
-
-.item-list li {
-  font-size: 12px;
-  margin-bottom: 3px;
-}
-
-/* Footer */
-.footer {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #FF0000;
-  color: #FFFFFF;
-  font-size: 12px;
-  text-align: center;
-}
-
-.partner-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.partner-logos img {
-  height: 20px;
-  filter: brightness(0) invert(1);
-  }
