@@ -1,1 +1,56 @@
 
+/* โทนสีแดง-ขาว */
+:root {
+    --primary-color: #d10000;
+    --secondary-color: #ffffff;
+    --accent-color: #ff5252;
+}
+
+.red-white-theme {
+    background-color: var(--secondary-color);
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-color);
+}
+
+.banner {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
