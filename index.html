@@ -1,43 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สยามชัย สาขาปทุมธานี 2 | เครื่องใช้ไฟฟ้าผ่อนชำระ 0%</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สยามชัย - อุปกรณ์เครื่องใช้ไฟฟ้า</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="red-white-theme">
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="สยามชัย">
-            <h1>สาขาปทุมธานี 2</h1>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="โลโก้สยามชัย">
+    </div>
+    <nav class="menu">
+      <ul id="menuList">
+        <li><a href="#" class="active">หน้าแรก</a></li>
+        <li><a href="#">สินค้า</a></li>
+        <li><a href="#">วิธีสั่งซื้อ</a></li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <a href="#"><img src="images/user-icon.png" alt="เข้าสู่ระบบ"></a>
+    </div>
+    <div class="hamburger" id="hamburger">☰</div>
+  </header>
+
+  <!-- Body -->
+  <main class="body">
+    <section class="promo-slider">
+      <!-- โซนโปรโมชัน (จะเพิ่ม JavaScript สำหรับเลื่อนภายหลัง) -->
+      <div class="slide">
+        <h2>โปรโมชันพิเศษ!</h2>
+        <p>ส่วนลดสูงสุด 30%</p>
+      </div>
+    </section>
+
+    <section class="product-categories">
+      <h2>หมวดหมู่สินค้า</h2>
+      <div class="category-grid">
+        <div class="category-item">
+          <img src="images/tv-icon.png" alt="ทีวี">
+          <p>ทีวี</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="products.html">สินค้า</a></li>
-                <li><a href="installment.html">ผ่อนชำระ</a></li>
-                <li><a href="contact.html">ติดต่อเรา</a></li>
-                <li><a href="admin/index.html">เข้าสู่ระบบ</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- เพิ่มหมวดหมู่อื่นๆ ตามต้องการ -->
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <section class="banner">
-            <h2>เครื่องใช้ไฟฟ้า ผ่อน 0% สูงสุด 10 เดือน</h2>
-        </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="partners">
+      <h3>พันธมิตร</h3>
+      <div class="partner-logos">
+        <a href="#"><img src="images/samsung-logo.png" alt="Samsung"></a>
+        <!-- เพิ่มโลโก้พันธมิตรอื่นๆ -->
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2023 สยามชัย. สงวนลิขสิทธิ์ทุกประการ</p>
+    </div>
+  </footer>
 
-        <section class="featured-products">
-            <!-- สินค้าแนะนำจะถูกเพิ่มโดย JavaScript -->
-        </section>
-    </main>
+  <!-- Line Chat Widget -->
+  <div class="line-chat">
+    <img src="images/line-icon.png" alt="แชท LINE">
+  </div>
 
-    <footer>
-        <p>© 2023 สยามชัย สาขาปทุมธานี 2</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
-  </html>
+                                             </html>
