@@ -4,12 +4,55 @@
   <meta charset="UTF-8" />
   <title>สยามชัยปทุม 2</title>
   <style>
-    /* ปุ่ม close */
+    /* เมนู */
+    nav {
+      background-color: #d32f2f; /* แดง */
+      padding: 10px 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffd600; /* เหลือง */
+    }
+
+    /* ฟิลเตอร์ */
+    .filter-section {
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+    select {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #d32f2f;
+      color: #d32f2f;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      transition: 0.3s;
+    }
+    select:hover, select:focus {
+      border-color: #ffd600;
+      color: #a52727;
+    }
+
+    /* Pop-up cookie */
     #cookie-popup {
       position: fixed;
       bottom: 20px;
-      left: 20px;
-      right: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: #fff4cc;
       border: 2px solid #ffd700;
       padding: 15px 20px;
@@ -24,8 +67,6 @@
       align-items: center;
       max-width: 600px;
       margin: auto;
-      left: 50%;
-      transform: translateX(-50%);
     }
     #cookie-popup p {
       margin: 0;
@@ -44,11 +85,145 @@
     #cookie-popup button:hover {
       background-color: #e6b800;
     }
+
+    /* เนื้อหา placeholder */
+    main {
+      padding: 20px;
+      font-family: "Sarabun", sans-serif;
+    }
+    .hero-banner {
+      background-color: #ffd600;
+      color: #d32f2f;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .category-list {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .category {
+      background-color: #d32f2f;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
+      user-select: none;
+    }
+    .category:hover {
+      background-color: #a52727;
+    }
+    .line-contact {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .line-contact a {
+      background-color: #00c300;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .line-contact a:hover {
+      background-color: #009900;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #d32f2f;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      font-family: "Sarabun", sans-serif;
+      margin-top: 40px;
+      border-top: 3px solid #ffd600;
+    }
+    .partners {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .partner-logo {
+      width: 120px;
+      height: 60px;
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #d32f2f;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+      user-select: none;
+    }
   </style>
 </head>
 <body>
 
-  <!-- เนื้อหาหน้าเว็บอื่น ๆ ที่จะตามมา -->
+  <nav>
+    <ul>
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="products.html">สินค้าทั้งหมด</a></li>
+      <li><a href="how-to.html">วิธีใช้งาน</a></li>
+      <li><a href="admin-login.html">เข้าสู่ระบบ Admin</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero-banner">
+      สินค้าเครื่องใช้ไฟฟ้าคุณภาพจากสยามชัยปทุม 2
+    </div>
+
+    <div class="filter-section">
+      <label for="category-filter" style="font-weight:bold; color:#d32f2f;">เลือกหมวดหมู่สินค้า: </label>
+      <select id="category-filter">
+        <option value="all">ทั้งหมด</option>
+        <option value="air-conditioner">แอร์</option>
+        <option value="tv">ทีวี</option>
+        <option value="refrigerator">ตู้เย็น</option>
+        <option value="washing-machine">เครื่องซักผ้า</option>
+        <option value="electric-bike">รถจักรยานไฟฟ้า</option>
+        <option value="small-appliance">เครื่องใช้ไฟฟ้าขนาดเล็ก</option>
+      </select>
+    </div>
+
+    <div class="category-list">
+      <div class="category">แอร์</div>
+      <div class="category">ทีวี</div>
+      <div class="category">ตู้เย็น</div>
+      <div class="category">เครื่องซักผ้า</div>
+      <div class="category">รถจักรยานไฟฟ้า</div>
+    </div>
+
+    <div class="line-contact">
+      <a href="https://line.me/ti/p/your-line-id" target="_blank" rel="noopener noreferrer">📲 แอดไลน์เพื่อสอบถาม</a>
+    </div>
+  </main>
+
+  <footer>
+    <div>พันธมิตรและบริษัทผู้จัดส่งเครื่องใช้ไฟฟ้า</div>
+    <div class="partners">
+      <div class="partner-logo">Partner A</div>
+      <div class="partner-logo">Partner B</div>
+      <div class="partner-logo">Partner C</div>
+      <div class="partner-logo">Partner D</div>
+    </div>
+  </footer>
 
   <!-- Cookie Popup -->
   <div id="cookie-popup" style="display:none;">
@@ -59,7 +234,6 @@
   </div>
 
   <script>
-    // เช็คว่าผู้ใช้ยอมรับคุกกี้แล้วหรือยัง
     const cookiePopup = document.getElementById('cookie-popup');
     const cookieCloseBtn = document.getElementById('cookie-close-btn');
 
@@ -80,11 +254,17 @@
       hideCookiePopup();
     });
 
-    // แสดง popup ถ้ายังไม่ยอมรับ
     if (!checkCookieConsent()) {
       showCookiePopup();
     }
-  </script>
 
+    // ฟังก์ชันกรองสินค้า (ตัวอย่าง placeholder)
+    const filter = document.getElementById('category-filter');
+    filter.addEventListener('change', () => {
+      const selected = filter.value;
+      alert('คุณเลือกหมวดหมู่: ' + selected + '\nระบบจะไปแสดงสินค้าหมวดนี้ที่หน้าสินค้าทั้งหมด');
+      // สามารถเปลี่ยนเป็น redirect หรือกรองสินค้าแบบจริงจังในหน้าถัดไปได้
+    });
+  </script>
 </body>
 </html>
