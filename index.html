@@ -2,51 +2,89 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>สยามชัย</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>สยามชัยปทุม 2</title>
+  <style>
+    /* ปุ่ม close */
+    #cookie-popup {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background-color: #fff4cc;
+      border: 2px solid #ffd700;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      font-family: "Sarabun", sans-serif;
+      font-size: 14px;
+      color: #333;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 600px;
+      margin: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #cookie-popup p {
+      margin: 0;
+      padding-right: 10px;
+      line-height: 1.4;
+    }
+    #cookie-popup button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #cookie-popup button:hover {
+      background-color: #e6b800;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">โลโก้</div>
-    <nav>
-      <a href="#">แนะนำ</a>
-      <a href="#">สินค้าทั้งหมด</a>
-      <a href="#">วิธีใช้งาน</a>
-    </nav>
-    <div class="logo">จัน</div>
-  </header>
 
-  <section class="banner">
-    <h2>โซนแบนเนอร์</h2>
-  </section>
+  <!-- เนื้อหาหน้าเว็บอื่น ๆ ที่จะตามมา -->
 
-  <main>
-    <section class="category">
-      <h3>ทีวีขายดี</h3>
-      <div class="product-grid" id="tv-products"></div>
-    </section>
+  <!-- Cookie Popup -->
+  <div id="cookie-popup" style="display:none;">
+    <p>
+      สวัสดีลูกค้าทุกท่านยินดีต้อนรับสู่เว็บไซต์สยามชัยปทุม 2 เว็บไซต์ของเราไม่ใช่เว็บไซต์ official ข้อมูลแต่ละสาขาจะแตกต่างกันไปเรทราคาก็จะแตกต่างกันไปตามโปรโมชั่นดังนั้นอย่าเข้าใจผิดว่าเว็บไซต์นี้เป็นของ official ขอบคุณลูกค้าสนใจสามารถคลิกที่หน้าวิธีการใช้งานเว็บไซต์เพื่อความสะดวกในการใช้งานไม่อาจใช้ประถม 2 ขอขอบพระคุณคุณลูกค้าทุกท่านที่เข้าชมเว็บไซต์เรา
+    </p>
+    <button id="cookie-close-btn">ปิด</button>
+  </div>
 
-    <section class="category">
-      <h3>แอร์ขายดี</h3>
-      <div class="product-grid" id="air-products"></div>
-    </section>
+  <script>
+    // เช็คว่าผู้ใช้ยอมรับคุกกี้แล้วหรือยัง
+    const cookiePopup = document.getElementById('cookie-popup');
+    const cookieCloseBtn = document.getElementById('cookie-close-btn');
 
-    <section class="category">
-      <h3>เครื่องซักผ้าขายดี</h3>
-      <div class="product-grid" id="washer-products"></div>
-    </section>
+    function checkCookieConsent() {
+      return localStorage.getItem('cookieConsent') === 'true';
+    }
 
-    <section class="category">
-      <h3>ตู้เย็นขายดี</h3>
-      <div class="product-grid" id="fridge-products"></div>
-    </section>
-  </main>
+    function showCookiePopup() {
+      cookiePopup.style.display = 'flex';
+    }
 
-  <footer>
-    <p>ลิขสิทธิ์ © สยามชัยปทุม 2partner ที่ร่วมรายการ samsung LG toshiba hier mitsubishi daikin hitachi</p>
-  </footer>
+    function hideCookiePopup() {
+      cookiePopup.style.display = 'none';
+    }
 
-  <script src="js/script.js"></script>
+    cookieCloseBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'true');
+      hideCookiePopup();
+    });
+
+    // แสดง popup ถ้ายังไม่ยอมรับ
+    if (!checkCookieConsent()) {
+      showCookiePopup();
+    }
+  </script>
+
 </body>
 </html>
